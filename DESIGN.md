@@ -31,5 +31,35 @@ sequenceDiagram
 ```
 
 2. 画面遷移図
+```mermaid
+graph LR
+  %% スタイル
+  classDef default fill: #fff, stroke: #333, stroke-width: 1px;
+  style top fill: #fff,stroke: #333,stroke-width: 1px;
+  style timeCards fill: #fff,stroke: #333,stroke-width: 1px;
+
+  %% サブグラフ
+  subgraph top [トップ画面]
+    ログイン
+    %% 新規登録
+  end
+  
+  subgraph timeCards [勤怠管理画面]
+    勤務予実取得
+    勤務実績手動修正
+    勤務実績自動登録
+  end
+
+  subgraph timeCardsUpdate [勤務実績手動修正画面]
+    更新
+  end
+  
+  %% アロー
+  ログイン-->timeCards
+  勤務実績手動修正-->timeCardsUpdate
+  勤務予実取得--SaaS-->勤怠管理画面へ
+  更新-->勤怠管理画面へ
+  勤務実績自動登録--SaaS-->勤怠管理画面へ
+```
 
 3. ワイヤーフレーム
