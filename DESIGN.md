@@ -80,6 +80,17 @@ graph LR
 ```mermaid
 erDiagram
   Employee ||--o{ TimeCard: ""
+
+  Employee {
+    id                      bigint(20)    PK  ""
+    emp_no                  int(11)           "社員番号"
+    encrypted_password      varchar(191)      ""
+    reset_password_token    varchar(191)      ""
+    reset_password_sent_at  datetime          ""
+    remember_created_at     datetime          ""
+    created_at              datetime(6)       ""
+    updated_at              datetime(6)       ""
+  }
 ```
 
 ### ステップ3
