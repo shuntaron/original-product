@@ -91,6 +91,26 @@ erDiagram
     created_at              datetime(6)       ""
     updated_at              datetime(6)       ""
   }
+  TimeCard {
+    id                      bigint(20)    PK  ""
+    employee_id             int(11)       FK  ""
+    date                    date              "日付"
+    start_time_scheduled    time              "勤務開始予定時刻"
+    end_time_scheduled      time              "勤務終了予定時刻"
+    start_time_actual       time              "勤務開始実績時刻"
+    end_time_actual         time              "勤務終了実績時刻"
+    work_status             varchar(191)      "勤務状況"
+    is_holiday              int(11)           "休日フラグ"
+    group                   varchar(191)      "グループ"
+    working_time            time              "勤務時間"
+    overtime_time           time              "残業時間"
+    night_time              time              "深夜時間"
+    break_time              time              "休憩時間"
+    application_status      int(11)           "申請フラグ"
+    remarks                 varchar(191)      "備考"
+    created_at              datetime(6)       ""
+    updated_at              datetime(6)       ""
+  }
 ```
 
 ### ステップ3
