@@ -75,4 +75,11 @@ graph LR
 
 ### ステップ2
 
+#### 1. ER図
+
+```mermaid
+erDiagram
+  Employee ||--o{ TimeCard: ""
+```
+
 ### ステップ3
