@@ -114,4 +114,7 @@ erDiagram
 ```
 
 ### ステップ3
+
+#### 1. システム構成図
+
 ![Diagram](Diagram.drawio.png)
